@@ -1,7 +1,9 @@
+#Shahbozbek Hakimov
 def encoder(password):
     res = [int(x) for x in str(password)]
     new_list = [n + 3 for n in res]
     enpass = ""
+    #shifts password upwards by 3 integers#
     for i in new_list:
         if i == "10":
             i = 0
@@ -12,14 +14,9 @@ def encoder(password):
         enpass += str(i) + ""
     print("Your password has been encoded and stored! ")
     return enpass
+    #returns enpass to be later used#
 def decoder(enpass):
-    res = [int(x) for x in str(enpass)]
-    decodepass = [n- 3 for n in res]
-    depass = ""
-    for i in decodepass:
-        depass += str(i) + ""
-    print(f"The encoded password is {enpass}, and the original password is {depass}")
-    return depass
+    pass
 if __name__ == "__main__":
     while True:
         print("Menu\n-------------\n1. Encode\n2. Decode\n3. Quit")
@@ -32,3 +29,4 @@ if __name__ == "__main__":
             decoder(enpass)
         elif menu == "3":
             break
+        #prints menu and allows for input from the user#
